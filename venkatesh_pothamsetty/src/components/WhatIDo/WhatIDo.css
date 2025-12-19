@@ -1,0 +1,136 @@
+/* SECTION BACKGROUND (light purple opacity) */
+.services-section {
+  padding: 100px 80px;
+  border-radius: 20px;
+  background: rgba(127, 86, 218, 0.2);
+   margin:1em;
+  padding: 1em;
+}
+
+/* Header */
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.services-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: white;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  background: #7f56da;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* MAIN CARD CONTAINER */
+.services-container {
+  display: flex;
+  justify-content: center;
+ 
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* BASE CARD STYLE */
+.service-card {
+  width: 310px;
+  border-radius: 25px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ICON */
+.icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Card text */
+.service-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Arrow button */
+.arrow {
+  width: 38px;
+  height: 38px;
+  background: white;
+  color: #7f56da;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+
+/* ============================= */
+/*       PURPLE COLOR THEME      */
+/* ============================= */
+.card-primary {
+  background: #7f56da;
+  color: white;
+}
+
+.card-light {
+  background: #8056daa4; /* light purple */
+  color: #3b2f5f;
+}
+
+.card-soft {
+  background: #c8bae4; /* soft lavender */
+  color: #524772;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+    margin-top: 74px;
+  }
+
+  .services-header h1 {
+    font-size: 32px;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

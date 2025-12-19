@@ -1,0 +1,65 @@
+.gallery-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.gallery-modal {
+  width: min(1200px, 100%);
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.gallery-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.gallery-modal-header h2 {
+  margin: 0;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ✅ Desktop (web): same behavior */
+.gallery-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ✅ Tablet: 2 × 2 */
+@media (max-width: 900px) {
+  .gallery-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ Mobile: 1 × 1 */
+@media (max-width: 520px) {
+  .gallery-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,152 @@
+/* ===========================
+   YOUR ORIGINAL NAVBAR CSS
+=========================== */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-logo span {
+  color: #2563eb;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  color: #000;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Tablet (your existing) */
+@media (max-width: 768px) {
+  .nav {
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+/* ===========================
+   HAMBURGER MENU (NEW CODE)
+=========================== */
+
+.hamburger {
+  display: none;        /* hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background: #000;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* Animation to X */
+.rotate1 {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.rotate2 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hide {
+  opacity: 0;
+}
+
+/* ===========================
+   MOBILE NAV (≤ 480px)
+=========================== */
+@media (max-width: 480px) {
+  .nav {
+    padding: 14px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  
+  .nav-links {
+    position: absolute;
+    top: 59px;
+    right: 0;
+    width: 100%;
+    background: white;
+    flex-direction: row;
+    text-align: center;
+    gap: 22px;
+    padding: 20px 0;
+
+    
+    border-left: 2px solid #7f56da;
+    border-right: 2px solid #7f56da;
+    border-bottom: 2px solid #7f56da;
+
+   
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    z-index: 999;
+  }
+
+  /* When menu is opened */
+  .nav-open {
+   opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    padding: 6px 0;
+  }
+}
