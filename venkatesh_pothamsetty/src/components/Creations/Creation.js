@@ -56,9 +56,7 @@ function Creations() {
     <section className="creations-section" id="projects">
       <div className="creations-header">
         <h1>Explore My Top Creations</h1>
-        <a href="#projects" className="explore-btn">
-          Explore All →
-        </a>
+       
       </div>
 
       {/* Desktop layout (your current design) */}
