@@ -107,6 +107,7 @@ function Resume() {
           <p>
             <strong>February 2021 – December 2025</strong><br />
             Full Stack Developer (JavaScript / MERN)<br />
+            AWS Webhosting Engineer <br />
             Tata Consultancy Services (TCS), India
           </p>
 

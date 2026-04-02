@@ -4,6 +4,7 @@ import "./Creation.css";
 import pedalPatchImg from "../../assets/Pedal_Patch.png";
 import streetSightImg from "../../assets/street_sight.png";
 import kyntraImg from "../../assets/Kyntra.png";
+import Homoeo from "../../assets/Homoeo.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -30,6 +31,12 @@ function Creations() {
       subtitle: "E-Commerce Fashion Store",
       image: kyntraImg,
       url: "https://kyntra.wmdd.ca",
+    },
+    {
+      title: "Vikas Homoeopathy and Naturopathy Clinic",
+      subtitle: "Hosipital portfolio website",
+      image: Homoeo,
+      url: "https://vikashomoeo.com",
     },
   ];
 
